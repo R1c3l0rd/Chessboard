@@ -209,11 +209,11 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       It is possible to implement the secondary methods using the kernel such as to transfer the board we keep the board value. In addition in chess in a majority of cases one would promote to a queen and therefore we can base our other promotion method off of it.
 
-- Component Design #2: LeagueTable
+- Component Design #2: leagueTable
   - **Description**:
     - The purpose of this component is to model the standings of teams in a sports league. The design must be flexible and contain a large amount of data.
   - **Kernel Methods**:
-   String standings(LeagueTable L): return the current standings of all the teams
+   String standings(leagueTable L): return the current standings of all the teams
    int wins(String S):return the amount of wins a team has
    int losses(String S): return the amount of losses a team has
   - **Secondary Methods**:

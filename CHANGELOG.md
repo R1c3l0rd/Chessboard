@@ -6,7 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## [Unreleased]
+## [2025.2.4]
+
+### Added
+
+- Cloned this github template to start the component project
+- Designed a Chessboard component
+- Designed a leagueTable component
+- Designed a callLog component
 
 ## [2024.12.30]
 
