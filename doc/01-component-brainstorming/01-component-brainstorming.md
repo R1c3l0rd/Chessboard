@@ -213,14 +213,14 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - The purpose of this component is to model the standings of teams in a sports league. The design must be flexible and contain a large amount of data.
   - **Kernel Methods**:
-   - String standings(leagueTable L): return the current standings of all the teams
-   - int wins(String S):return the amount of wins a team has
-   - int losses(String S): return the amount of losses a team has
+    - String standings(leagueTable L): return the current standings of all the teams
+    - int wins(String S):return the amount of wins a team has
+    - int losses(String S): return the amount of losses a team has
   - **Secondary Methods**:
-   - double winrate(String S): return the win% of a team
-   - String record(String S): return the overall record of a team
-   - void newWin(String S): mark that a team won their game
-   - void newLoss(String S): mark that a team lost their game
+    - double winrate(String S): return the win% of a team
+    - String record(String S): return the overall record of a team
+    - void newWin(String S): mark that a team won their game
+    - void newLoss(String S): mark that a team lost their game
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -240,12 +240,12 @@ will likely refine your design to make your implementation easier to use.
     - The purpose of this component is to model a phones contact list/call log.
   - **Kernel Methods**:
     - String last10(): return the last 10 entries in the phones call log
-   - String last10Missing(): return the last 10 entries that were missed
-   - Boolean isEmpty(): returns whether the call log is empty or not
+    - String last10Missing(): return the last 10 entries that were missed
+    - Boolean isEmpty(): returns whether the call log is empty or not
   - **Secondary Methods**:
     - String delete(): delete the last entry in the log and return its information
     -  void add(): add a contact to the log
-     - void update(Int i):update the information of a contact
+    - void update(Int i):update the information of a contact
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
