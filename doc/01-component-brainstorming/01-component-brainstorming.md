@@ -187,64 +187,78 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - The purpose of this component is to model the value of the pieces on a chess board at any given time. The value of the chess pieces on a board vary frequently throughout the game and can both increase and decrease. My intent with this design is to provide an efficient and simple way to tally that.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - int boardValue(): gives the value of the pieces on the board
+  boolean isEmpty(): reports whether or not the board is is empty
+   int promoteQueen: promotes a pawn to a queen and returns the new board value
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - int pieceCapture(String S): returns the new value of the board after a piece capture
+    int promote(String S): promotes a pawn to a specific piece and returns the new value
+    void transferBoard(Chessboard C): transfers the pieces and value of a chessboard to another chessboard
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think this component would have to be mutable as the board state is constantly changing.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No?
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - We can treat the value of a queen a constant for the promotion method.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      It is possible to implement the secondary methods using the kernel such as to transfer the board we keep the board value. In addition in chess in a majority of cases one would promote to a queen and therefore we can base our other promotion method off of it.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: LeagueTable
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the standings of teams in a sports league. The design must be flexible and contain a large amount of data.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+   String standings(LeagueTable L): return the current standings of all the teams
+   int wins(String S):return the amount of wins a team has
+   int losses(String S): return the amount of losses a team has
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - double winrate(String S): return the win% of a team
+    String record(String S): return the overall record of a team
+    void newWin(String S): mark that a team won their game
+    void newLoss(String S): mark that a team lost their game
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This component would be mutable in order to constantly modify the wins and losses of teams
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This method could benefit from an incrementer but other than that I don't know.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes I can, many of the secondary methods utilize information from the kernel methods. For example to get a winrate or the record, it would get the values from the wins and losses methods.
+
+- Component Design #3: callLog
+  - **Description**:
+    - The purpose of this component is to model a phones contact list/call log.
+  - **Kernel Methods**:
+    - String last10(): return the last 10 entries in the phones call log
+    String last10Missing(): return the last 10 entries that were missed
+    Boolean isEmpty(): returns whether the call log is empty or not
+  - **Secondary Methods**:
+    - String delete(): delete the last entry in the log and return its information
+      void add(): add a contact to the log
+      void update(Int i):update the information of a contact
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - This component would be mutable as contacts are added and deleted
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - I think so to properly store and return the information on the contact.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - I don't think so
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Not really
 
 ## Post-Assignment
 
@@ -253,7 +267,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
