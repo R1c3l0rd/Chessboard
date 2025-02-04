@@ -188,12 +188,12 @@ will likely refine your design to make your implementation easier to use.
     - The purpose of this component is to model the value of the pieces on a chess board at any given time. The value of the chess pieces on a board vary frequently throughout the game and can both increase and decrease. My intent with this design is to provide an efficient and simple way to tally that.
   - **Kernel Methods**:
     - int boardValue(): gives the value of the pieces on the board
-  boolean isEmpty(): reports whether or not the board is is empty
-   int promoteQueen: promotes a pawn to a queen and returns the new board value
+    - boolean isEmpty(): reports whether or not the board is is empty
+   - int promoteQueen: promotes a pawn to a queen and returns the new board value
   - **Secondary Methods**:
     - int pieceCapture(String S): returns the new value of the board after a piece capture
-    int promote(String S): promotes a pawn to a specific piece and returns the new value
-    void transferBoard(Chessboard C): transfers the pieces and value of a chessboard to another chessboard
+    - int promote(String S): promotes a pawn to a specific piece and returns the new value
+    - void transferBoard(Chessboard C): transfers the pieces and value of a chessboard to another chessboard
 
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
@@ -213,14 +213,14 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - The purpose of this component is to model the standings of teams in a sports league. The design must be flexible and contain a large amount of data.
   - **Kernel Methods**:
-   String standings(leagueTable L): return the current standings of all the teams
-   int wins(String S):return the amount of wins a team has
-   int losses(String S): return the amount of losses a team has
+  - String standings(leagueTable L): return the current standings of all the teams
+  - int wins(String S):return the amount of wins a team has
+  - int losses(String S): return the amount of losses a team has
   - **Secondary Methods**:
     - double winrate(String S): return the win% of a team
-    String record(String S): return the overall record of a team
-    void newWin(String S): mark that a team won their game
-    void newLoss(String S): mark that a team lost their game
+   - String record(String S): return the overall record of a team
+   - void newWin(String S): mark that a team won their game
+   - void newLoss(String S): mark that a team lost their game
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -240,12 +240,12 @@ will likely refine your design to make your implementation easier to use.
     - The purpose of this component is to model a phones contact list/call log.
   - **Kernel Methods**:
     - String last10(): return the last 10 entries in the phones call log
-    String last10Missing(): return the last 10 entries that were missed
-    Boolean isEmpty(): returns whether the call log is empty or not
+   - String last10Missing(): return the last 10 entries that were missed
+   - Boolean isEmpty(): returns whether the call log is empty or not
   - **Secondary Methods**:
     - String delete(): delete the last entry in the log and return its information
-      void add(): add a contact to the log
-      void update(Int i):update the information of a contact
+    -  void add(): add a contact to the log
+     - void update(Int i):update the information of a contact
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
