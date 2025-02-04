@@ -189,7 +189,7 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - int boardValue(): gives the value of the pieces on the board
     - boolean isEmpty(): reports whether or not the board is is empty
-   - int promoteQueen: promotes a pawn to a queen and returns the new board value
+    - int promoteQueen: promotes a pawn to a queen and returns the new board value
   - **Secondary Methods**:
     - int pieceCapture(String S): returns the new value of the board after a piece capture
     - int promote(String S): promotes a pawn to a specific piece and returns the new value
@@ -213,11 +213,11 @@ will likely refine your design to make your implementation easier to use.
   - **Description**:
     - The purpose of this component is to model the standings of teams in a sports league. The design must be flexible and contain a large amount of data.
   - **Kernel Methods**:
-  - String standings(leagueTable L): return the current standings of all the teams
-  - int wins(String S):return the amount of wins a team has
-  - int losses(String S): return the amount of losses a team has
+   - String standings(leagueTable L): return the current standings of all the teams
+   - int wins(String S):return the amount of wins a team has
+   - int losses(String S): return the amount of losses a team has
   - **Secondary Methods**:
-    - double winrate(String S): return the win% of a team
+   - double winrate(String S): return the win% of a team
    - String record(String S): return the overall record of a team
    - void newWin(String S): mark that a team won their game
    - void newLoss(String S): mark that a team lost their game
